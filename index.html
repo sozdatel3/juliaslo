@@ -14,11 +14,10 @@
       --muted: #626879;
       --line: #d8def4;
       --paper: #ffffff;
-      --wash: #f4f6ff;
+      --wash: #f7f8fc;
       --blue: #405dbc;
       --blue-dark: #2f4697;
       --gold: #b98a2e;
-      --grid: rgba(64, 93, 188, 0.12);
     }
 
     * {
@@ -32,11 +31,7 @@
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        linear-gradient(var(--grid) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-        var(--wash);
-      background-size: 72px 72px;
+      background: linear-gradient(180deg, #f7f8fc 0%, #ffffff 58%, #f7f8fc 100%);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
     }
@@ -56,7 +51,7 @@
       grid-template-columns: 1fr auto;
       align-items: center;
       gap: 18px;
-      padding: 14px 0 28px;
+      padding: 14px 0 26px;
       font-size: 13px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -86,7 +81,7 @@
       gap: 24px;
       align-items: stretch;
       border-top: 4px solid var(--gold);
-      padding-top: 28px;
+      padding-top: 24px;
     }
 
     .hero-copy {
@@ -97,7 +92,7 @@
       justify-content: space-between;
       background: var(--paper);
       border: 1px solid var(--line);
-      padding: 34px;
+      padding: 32px;
     }
 
     .kicker {
@@ -112,8 +107,8 @@
     h1 {
       margin: 0;
       max-width: 760px;
-      font-size: clamp(44px, 7vw, 88px);
-      line-height: 0.96;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1;
       font-weight: 800;
       letter-spacing: 0;
     }
@@ -129,8 +124,9 @@
     .hero-side {
       grid-column: span 5;
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto;
       gap: 24px;
+      align-content: start;
     }
 
     .meta {
@@ -169,15 +165,16 @@
     }
 
     .video-panel {
-      min-height: 384px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       position: relative;
       overflow: hidden;
+      aspect-ratio: 16 / 9;
       border: 1px solid var(--line);
       background: #101422;
       color: #ffffff;
+      text-decoration: none;
     }
 
     .video-panel::before {
@@ -187,7 +184,6 @@
       background:
         linear-gradient(180deg, rgba(16, 20, 34, 0.12), rgba(16, 20, 34, 0.78)),
         url("https://img.youtube.com/vi/_ajbXW_SwMc/maxresdefault.jpg") center / cover;
-      transform: scale(1.01);
     }
 
     .video-panel-content {
@@ -201,6 +197,7 @@
       font-size: 28px;
       line-height: 1.1;
       letter-spacing: 0;
+      text-decoration: none;
     }
 
     .button-row {
@@ -243,7 +240,7 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 24px;
-      margin-top: 24px;
+      margin-top: 28px;
     }
 
     .section-title {
@@ -260,7 +257,7 @@
       grid-column: span 9;
       background: var(--paper);
       border: 1px solid var(--line);
-      padding: 28px;
+      padding: 30px;
     }
 
     .copy {
@@ -435,7 +432,7 @@
       }
 
       h1 {
-        font-size: 42px;
+        font-size: 40px;
       }
 
       .intro,
@@ -485,7 +482,7 @@
 
         <a class="video-panel" href="https://youtu.be/_ajbXW_SwMc" target="_blank" rel="noopener" aria-label="Смотреть запись вебинара на YouTube">
           <div class="video-panel-content">
-            <h2>Запись вебинара доступна для просмотра</h2>
+            <h2>Русский язык + английские субтитры</h2>
             <span class="button">Смотреть запись</span>
           </div>
         </a>
@@ -496,10 +493,10 @@
       <div class="section-title" id="about-title">Контекст</div>
       <div class="section-body">
         <p class="copy">
-          Независимо от того, удалось ли вам присутствовать на вебинаре, мы рады поделиться записью как бесплатным образовательным ресурсом.
+          Дорогие друзья, предлагаем вашему вниманию ресурсы нашего вебинара: запись на русском языке с английскими субтитрами и бесплатные практические гайды, объясняющие ключевые концепции на русском и английском языках.
         </p>
         <p class="copy">
-          Чтобы вы могли подробнее изучить тему в удобное для вас время, мы также подготовили <strong>Практический гид по защите семьи</strong>, который доступен на русском и английском языках.
+          Надеемся, эти материалы будут полезны для вас и ваших близких. Пожалуйста, поделитесь этой страницей с друзьями, родственниками и коллегами, которым эта информация может быть важна.
         </p>
       </div>
     </section>
@@ -512,7 +509,7 @@
             <div>
               <div class="resource-number">01 / Video</div>
               <h3>Запись вебинара</h3>
-              <p>Посмотрите обсуждение в удобное время.</p>
+              <p>На русском языке с английскими субтитрами.</p>
             </div>
             <a class="button" href="https://youtu.be/_ajbXW_SwMc" target="_blank" rel="noopener">Смотреть запись</a>
           </article>
