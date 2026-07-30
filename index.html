@@ -313,7 +313,7 @@
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 28px;
-      align-items: start;
+      align-items: stretch;
     }
 
     .signature {
@@ -345,6 +345,7 @@
 
     .hihello {
       display: grid;
+      align-content: center;
       justify-items: center;
       gap: 16px;
       padding: 24px;
@@ -358,6 +359,14 @@
       margin: 0;
       font-size: 24px;
       letter-spacing: 0;
+    }
+
+    .hihello-note {
+      max-width: 260px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
     }
 
     .hihello-card-link {
@@ -595,6 +604,7 @@
 
           <aside class="hihello" aria-label="Julia Barinova HiHello card">
             <h3>Connect with Julia</h3>
+            <p class="hihello-note">Save Julia's contact card or scan the QR code from your phone.</p>
             <a class="button" href="https://hihello.com/hi/jbarinova" target="_blank" rel="noopener">Open HiHello card</a>
             <a class="hihello-card-link" href="https://hihello.com/hi/jbarinova" target="_blank" rel="noopener" aria-label="Open Julia Barinova HiHello card">
               <img class="qr" src="assets/julia-hihello-qr.png" alt="QR code for Julia Barinova HiHello card">
