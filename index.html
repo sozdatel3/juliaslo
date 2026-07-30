@@ -86,10 +86,10 @@
 
     .hero-copy {
       grid-column: span 7;
-      min-height: 520px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 30px;
       background: var(--paper);
       border: 1px solid var(--line);
       padding: 32px;
@@ -107,7 +107,7 @@
     h1 {
       margin: 0;
       max-width: 760px;
-      font-size: clamp(42px, 6vw, 76px);
+      font-size: clamp(40px, 5.4vw, 68px);
       line-height: 1;
       font-weight: 800;
       letter-spacing: 0;
@@ -124,9 +124,8 @@
     .hero-side {
       grid-column: span 5;
       display: grid;
-      grid-template-rows: auto auto;
+      grid-template-rows: auto 1fr;
       gap: 24px;
-      align-content: start;
     }
 
     .meta {
@@ -170,7 +169,7 @@
       justify-content: flex-end;
       position: relative;
       overflow: hidden;
-      aspect-ratio: 16 / 9;
+      min-height: 260px;
       border: 1px solid var(--line);
       background: #101422;
       color: #ffffff;
@@ -183,7 +182,7 @@
       inset: 0;
       background:
         linear-gradient(180deg, rgba(16, 20, 34, 0.12), rgba(16, 20, 34, 0.78)),
-        url("https://img.youtube.com/vi/_ajbXW_SwMc/maxresdefault.jpg") center / cover;
+        url("https://img.youtube.com/vi/_ajbXW_SwMc/maxresdefault.jpg") center / contain no-repeat;
     }
 
     .video-panel-content {
@@ -361,6 +360,12 @@
       letter-spacing: 0;
     }
 
+    .hihello-card-link {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
     .qr {
       width: min(220px, 100%);
       height: auto;
@@ -368,6 +373,7 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--paper);
+      margin: 0 auto;
     }
 
     .footer {
@@ -392,6 +398,11 @@
 
       .hero-copy {
         min-height: auto;
+      }
+
+      .video-panel {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
       }
 
       .resources,
@@ -585,7 +596,7 @@
           <aside class="hihello" aria-label="Julia Barinova HiHello card">
             <h3>Connect with Julia</h3>
             <a class="button" href="https://hihello.com/hi/jbarinova" target="_blank" rel="noopener">Open HiHello card</a>
-            <a href="https://hihello.com/hi/jbarinova" target="_blank" rel="noopener" aria-label="Open Julia Barinova HiHello card">
+            <a class="hihello-card-link" href="https://hihello.com/hi/jbarinova" target="_blank" rel="noopener" aria-label="Open Julia Barinova HiHello card">
               <img class="qr" src="assets/julia-hihello-qr.png" alt="QR code for Julia Barinova HiHello card">
             </a>
           </aside>
