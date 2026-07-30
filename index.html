@@ -164,39 +164,27 @@
     }
 
     .video-panel {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      position: relative;
+      display: block;
       overflow: hidden;
-      min-height: 260px;
       border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .video-frame {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
       background: #101422;
-      color: #ffffff;
-      text-decoration: none;
     }
 
-    .video-panel::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(16, 20, 34, 0.12), rgba(16, 20, 34, 0.78)),
-        url("https://img.youtube.com/vi/_ajbXW_SwMc/maxresdefault.jpg") center / contain no-repeat;
-    }
-
-    .video-panel-content {
-      position: relative;
-      padding: 24px;
-    }
-
-    .video-panel h2 {
-      margin: 0 0 14px;
-      max-width: 420px;
-      font-size: 28px;
-      line-height: 1.1;
-      letter-spacing: 0;
-      text-decoration: none;
+    .video-caption {
+      margin: 0;
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
     }
 
     .button-row {
@@ -409,11 +397,6 @@
         min-height: auto;
       }
 
-      .video-panel {
-        min-height: 0;
-        aspect-ratio: 16 / 9;
-      }
-
       .resources,
       .contact-grid {
         grid-template-columns: 1fr;
@@ -500,12 +483,10 @@
           </div>
         </div>
 
-        <a class="video-panel" href="https://youtu.be/_ajbXW_SwMc" target="_blank" rel="noopener" aria-label="Смотреть запись вебинара на YouTube">
-          <div class="video-panel-content">
-            <h2>Русский язык + английские субтитры</h2>
-            <span class="button">Смотреть запись</span>
-          </div>
-        </a>
+        <div class="video-panel" aria-label="Запись вебинара">
+          <iframe class="video-frame" src="https://www.youtube.com/embed/_ajbXW_SwMc" title="Запись вебинара: Ваши дети. Ваши деньги. Ваше спокойствие" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <p class="video-caption">Запись вебинара на русском языке с английскими субтитрами.</p>
+        </div>
       </div>
     </section>
 
